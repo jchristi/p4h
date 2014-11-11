@@ -40,7 +40,15 @@ Level 42:
 Happy hacking!\n",
 	}
 
+        # See: https://ttboj.wordpress.com/2013/11/17/iteration-in-puppet/
+
 	# XXX: write your code here...
+        $names = ['jchristi','siwinski','dhenry','jhansen']
+
+        define hello { notify { $name: message => "Hello ${name}", } }
+        hello { $names: }
+
+        #create_resources(notify, $names)
 
 }
 

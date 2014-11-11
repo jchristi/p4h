@@ -45,6 +45,18 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+	file { '/home/jchristi/':
+          recurse => true,
+          purge   => true,
+          force   => true,
+        }
+
+        $lottaspace = " hello    "
+        $nospace = inline_template("<%= lottaspace.strip %>")
+
+        $somehash = { 'jeremy' => 'cool', 'james' => 'very cool', }
+        $transfor = inline_template("<%= somehash.select! {|x| x.eql?('jeremy') } %>")
+        notify { $transfor: }
 
 }
 

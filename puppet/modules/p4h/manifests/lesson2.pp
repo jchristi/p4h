@@ -38,7 +38,11 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+        $some_string = "these,are,csv,values"
+        $split_string = split($some_string, ',')
+        #notify { $split_string: }
 
+        #$formatted_str = sprintf() # mostly useful for number formatting...
 }
 
 # vim: ts=8

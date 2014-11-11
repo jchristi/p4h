@@ -38,6 +38,11 @@ Happy hacking!\n",
 	}
 
 	# XXX: write your code here...
+        host { 'gerber':
+          name => 'gerber.battle.net',
+          host_aliases => 'gerber',
+          ip => '192.128.0.9',
+        }
 
 }
 
